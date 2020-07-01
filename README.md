@@ -10,4 +10,4 @@ d'(k) is the desired system output, and w<sub>oi</sub> are the **Volterra Kernel
 ![volterraLMSVectors](Images/volterraLMSVectors.png)
 
 ## References
-Diniz, Adaptive filtering: algorithms and practical implementation (2013)
+Diniz, Paulo S. R. - Adaptive filtering: algorithms and practical implementation (2013)
