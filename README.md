@@ -1,5 +1,5 @@
 # volterraLMS
-A simple Volterra LMS Filter implementation.
+Simplee Volterra LMS Filter implementations.
 
 Volterra series are widely used in nonlinear system modeling. The Volterra series expansion of a nonlinear system consists of a nonrecursive series in which the output signal is related to the input signal as
 
