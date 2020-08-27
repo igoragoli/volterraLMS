@@ -13,13 +13,13 @@ close;
 
 % Filter parameters
 numberOfSamples = 1000;
-numberOfIterations = 10;
+numberOfIterations = 50;
 K = 2; % Series order 
 M = 10; % Filter order
 eps = 1e-3; 
 
 % Convergence parameters
-mu0 = 0.04; % Convergence coefficient
+mu0 = 0.001; % Convergence coefficient
 
 % Input signal correlation parameters
 sig_u2 = 1; % Input signal variance
@@ -35,7 +35,7 @@ sig_v2 = 1e-6; % Corruption noise variance
 % equal to the kronecker product of wAux(1), wAux(2), ..., wAux(Ko).
 Ko = 2;
 Mo = 10;
-wAux = rand(Mo, Ko) * 0.01;
+wAux = rand(Mo, Ko) * 0.1;
 wo = 1;
 for k = 1:Ko
     wo = kron(wo, wAux(:, k));
@@ -74,7 +74,7 @@ for l = 1:numberOfIterations
     for i = 1:numberOfSamples
         % Creating row input regressor
         ui = [input(i) ui(1:M - 1)];
-        uio = [input(i) ui(1:Mo - 1)];
+        uio = [input(i) uio(1:Mo - 1)];
         
         % Defining desired output
         uioK = 1;
@@ -117,17 +117,8 @@ outputMean = mean(outputMatrix);
 
 % Plotting Graphs
 figure;
-subplot(1,2,1)
 plot(10 * log(mse));
 xlabel('i');
 ylabel('Mean Squared Error [dB])');
-ylim([-100, 20])
+% ylim([-100, 20])
 grid;
-subplot(1,2,2)
-hold on;
-plot(outputMean, 'r');
-%plot(d, 'r');
-xlabel('i');
-ylabel('Outputs');
-grid;
-hold off;

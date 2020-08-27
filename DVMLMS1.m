@@ -12,14 +12,14 @@ clear;
 close;
 
 % Filter parameters
-numberOfSamples = 2000;
+numberOfSamples = 5000;
 numberOfIterations = 50;
-K = 2; % Series order 
+K = 4; % Series order 
 M = 10; % Filter order
 eps = 1e-3; 
 
 % Convergence parameters
-mu0 = 0.01; % Convergence coefficient
+mu0 = 0.0001; % Convergence coefficient
 
 % Input signal correlation parameters
 sig_u2 = 1; % Input signal variance
