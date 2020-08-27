@@ -18,4 +18,5 @@ The Decomposable Volterra Model (DVM) is described in detail in [2]. There is a 
 
 ## References
 [1] Diniz, Paulo S. R. - Adaptive filtering: algorithms and practical implementation (2013).
+
 [2] Pinheiro, F. C. & Lopes, C. G. - A Low-Complexity Nonlinear Least Mean Squares Filter Based on a Decomposable Volterra Model. IEEE Trans. Signal Process. 67, 5463–5478 (2019).
